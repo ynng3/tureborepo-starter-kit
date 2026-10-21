@@ -1,0 +1,25 @@
+{
+  "name": "turborepo-starter-kit",
+  "private": true,
+  "version": "1.0.0",
+  "packageManager": "npm@10.9.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "dev:next": "npm --workspace apps/nextjs run dev",
+    "dev:react": "npm --workspace apps/react run dev",
+    "dev:express": "npm --workspace apps/expressjs run dev",
+    "db:up": "docker compose up -d postgres",
+    "db:down": "docker compose down",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "check-types": "turbo run check-types"
+  },
+  "devDependencies": {
+    "turbo": "^2.3.3",
+    "typescript": "^5.7.3"
+  }
+}
