@@ -5,6 +5,7 @@ A full-stack monorepo starter built with Turborepo and TypeScript. It includes:
 - Next.js app for server-rendered UI
 - React + Vite app for client-side frontend
 - Express.js API server
+- NestJS API server example
 - Shared constants package
 - Prisma + PostgreSQL database adapter
 - JWT-based login/register sample API
@@ -16,7 +17,8 @@ A full-stack monorepo starter built with Turborepo and TypeScript. It includes:
 ├── apps/
 │   ├── nextjs/
 │   ├── react/
-│   └── expressjs/
+│   ├── expressjs/
+│   └── nestjs/
 ├── packages/
 │   ├── constants/
 │   └── database/
@@ -62,6 +64,7 @@ If you do not want to use Docker, install PostgreSQL locally and set the `DATABA
 npm run dev:next
 npm run dev:react
 npm run dev:express
+npm run dev:nest
 ```
 
 ## Root scripts
@@ -88,7 +91,7 @@ cp packages/database/.env.example packages/database/.env
 Core variables:
 
 - `DATABASE_URL` for Prisma connection
-- `PORT` for Express server
+- `PORT` for Express/NestJS servers
 - `JWT_SECRET` for JWT signing
 
 Example:
@@ -162,6 +165,7 @@ A sample account is included in the Prisma seed:
 - Next.js: http://localhost:3000
 - React: http://localhost:5173
 - Express API: http://localhost:3001
+- NestJS API: http://localhost:3002
 
 ## Express architecture
 

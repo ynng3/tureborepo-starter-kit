@@ -12,6 +12,7 @@
     "dev:next": "npm --workspace apps/nextjs run dev",
     "dev:react": "npm --workspace apps/react run dev",
     "dev:express": "npm --workspace apps/expressjs run dev",
+    "dev:nest": "npm --workspace apps/nestjs run dev",
     "db:up": "docker compose up -d postgres",
     "db:down": "docker compose down",
     "build": "turbo run build",
